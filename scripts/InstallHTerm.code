@@ -1,0 +1,39 @@
+// InstallHTerm
+//
+
+// check if hterm is already installed
+// use ip as identfier
+$users = users
+$id = System.ComputerIP
+
+$exists = Functions.database_load(installed=$id | false) // Check if user has already installed HTerm
+
+switch($exists) {
+  case true:
+    $caninstall = false
+    Functions.message("HTerm is already installed!" | 255,0,0)
+    break;
+    
+  case false:
+    $caninstall = true
+    break;
+}
+
+if $caninstall = true // Can install hterm, go and go that
+    $packages = echo<>cat<>ping<>install<>connect<>pacmg<>clear<>./<>mkdir<>rm<>touch<>man // Set up string containing package names
+    $pkgcnt = Functions.explode_into_array($packages | <> | $pkgarray) // put package names in array
+    
+    $check = Functions.database_save(installed=$id | true) // Set HTerm to installed
+    Windows.HTerm.List2.AddItem "Installing HTerm..."
+    Windows.HTerm.List2.AddItem Package count: $pkgcnt
+    
+    For $cnt = 1 to $pkgcnt // Loop through all packages
+        Windows.HTerm.List2.AddItem Installing package $pkgarray[$cnt]
+        $chk = Functions.database_save($id=pkg-$pkgarray[$cnt] | true) // Save package name under user
+        if $chk = SAVED // If it worked
+            Windows.HTerm.List2.AddItem Package $pkgarray[$cnt] installed successfully
+        else
+            Windows.HTerm.List2.AddItem Package $pkgarray[$cnt] failed to install
+        endif
+    Next
+endif

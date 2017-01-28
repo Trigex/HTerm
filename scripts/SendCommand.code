@@ -1,5 +1,12 @@
 // SendCommand
 //
+// get text from textbox
 $text = Windows.HTerm.Input1.Text
+// write command to output
 Windows.HTerm.List2.AddItem $text
+if $text = "install"
+   Execute.InstallHTerm
+endif
+// blank input
 Windows.HTerm.Input1.Text = ""
+
