@@ -1,0 +1,1 @@
+Standard Window Text Small<>Trebuchet MS<>10<>255,255,255<>128,0,0<>7<>True<>False<>False

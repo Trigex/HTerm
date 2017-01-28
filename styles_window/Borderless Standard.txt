@@ -1,0 +1,1 @@
+Borderless Standard<>False<>False<>0<><>0<><><>0,121,107<>128,0,0<>0,0,198<>False<>0<>True<>False<>True<>True<>True<>data\defaults\close_buttons\close_02.png<><><><><><><><><><><>

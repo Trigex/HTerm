@@ -1,0 +1,5 @@
+// SendCommand
+//
+$text = Windows.HTerm.Input1.Text
+Windows.HTerm.List2.AddItem $text
+Windows.HTerm.Input1.Text = ""

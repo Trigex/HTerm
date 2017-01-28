@@ -1,0 +1,1 @@
+Standard Button Small<>Trebuchet MS<>9<>0,121,107<>247,250,253<>Popup<>False<>False<>False<><>MiddleCenter<>32<>1

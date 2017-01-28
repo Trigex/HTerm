@@ -1,0 +1,1 @@
+Default Taskbar<>Dark Red<>Button (Red)<>null<>50<>45<>160<>0<>101<>170<>Bottom of Screen<><>255,0,0,0<><>

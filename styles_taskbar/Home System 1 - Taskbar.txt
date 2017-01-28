@@ -1,0 +1,1 @@
+Home System 1 - Taskbar<>Taskbar Button<>Styles are great<>null<>50<>72<>160<>0<>72<>160<>Bottom of Screen<>START<>255,0,0,0<><>

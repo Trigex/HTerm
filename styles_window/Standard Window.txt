@@ -1,0 +1,1 @@
+Standard Window<>False<>False<>15<>Password Cracker Status<>14<><><>0,150,136<>0,121,107<>189,189,189<>True<>1<>True<>False<>True<>True<>True<>home.png<><><><><><><><><><><>
