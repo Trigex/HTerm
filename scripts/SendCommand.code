@@ -1,12 +1,23 @@
 // SendCommand
 //
+$id = System.ComputerIP
 // get text from textbox
 $text = Windows.HTerm.Input1.Text
 // write command to output
 Windows.HTerm.List2.AddItem $text
-if $text = "install"
-   Execute.InstallHTerm
+$cmd = Functions.get_part($text | "" | 1) // Get base command
+$checkcmd = Functions.database_exists($id=pkg-$cmd) // Check if command exists
+if $checkcmd = 1 // Command exists
+    $file = Functions.file_exists(bin/$cmd.code) // Check if binary for command exists
+    if $file = 1 // Command on system, run it!
+        $file_data = Functions.file_load_text(bin/$cmd.code | $pass) // load binary data
+        $run = Functions.execute_code($file_data) // run it
+    else
+        Windows.HTerm.List2.AddItem Binary for package $cmd not found in /bin/$cmd.code
+    endif
+else
+    Windows.HTerm.List2.AddItem Command $cmd not found
 endif
+
 // blank input
 Windows.HTerm.Input1.Text = ""
-

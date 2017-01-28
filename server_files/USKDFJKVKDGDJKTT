@@ -1,0 +1,6 @@
+Windows.HTerm.List2.ClearItems
+Windows.HTerm.List2.AddItem HTerm help menu
+Windows.HTerm.List2.AddItem =========
+Windows.HTerm.List2.AddItem echo - Prints supplied string
+Windows.HTerm.List2.AddItem cat - Prints contents of file to screen
+Windows.HTerm.List2.AddItem
