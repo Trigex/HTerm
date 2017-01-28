@@ -1,3 +1,0 @@
-// echo - Print supplied text
-// Programmed by Trigex, 2017, licensed under the Apache License version 2
-Windows.HTerm.List2.AddItem $echoval

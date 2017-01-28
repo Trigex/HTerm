@@ -6,6 +6,8 @@ $text = Windows.HTerm.Input1.Text
 // write command to output
 Windows.HTerm.List2.AddItem $text
 $cmd = Functions.get_part($text | "" | 1) // Get base command
+Windows.HTerm.List2.AddItem $cmd
+$arg = 
 $checkcmd = Functions.database_exists($id=pkg-$cmd) // Check if command exists
 if $checkcmd = 1 // Command exists
     $file = Functions.file_exists(bin/$cmd.code) // Check if binary for command exists
