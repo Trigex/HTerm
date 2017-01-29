@@ -1,0 +1,10 @@
+// man - Get manpages on command
+// Programmed by Trigex, 2017, licensed under the Apache License version 2
+$mancmd = Functions.database_exists(man-pkg-$arg) // check if command has a man entry
+echo man-pkg-$arg
+if $mancmd = 1 // exists
+    $entry = Functions.database_load(man-pkg-$arg | Error: Entry not found)
+    Windows.HTerm.List2.AddItem $entry
+else
+    Windows.HTerm.List2.AddItem $arg does not have a manpage
+endif

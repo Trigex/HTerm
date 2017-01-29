@@ -2,7 +2,7 @@
 // Programmed by Trigex, 2017, licensed under the Apache License version 2
 $id = System.ComputerIP
 
-$packages = echo<>cat<>ping<>install<>connect<>pacmg<>clear<>./<>mkdir<>rm<>touch<>man<>help<>clear<>ls<>cd // Set up string containing package names
+$packages = echo<>cat<>install<>connect<>pacmg<>clear<>./<>mkdir<>rm<>touch<>man<>help<>clear<>ls<>cd<>wget<>screenfetch<>filecheck // Set up string containing package names
 $pkgcnt = Functions.explode_into_array($packages | <> | $pkgarray) // put package names in array
     
 $setinstalled = Functions.database_save($id=installed | true) // Set HTerm to installed

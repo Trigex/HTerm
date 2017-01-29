@@ -1,0 +1,4 @@
+$a = 1
+Windows.HTerm.List2.AddItem $a
+$a = 2
+Windows.HTerm.List2.AddItem $a

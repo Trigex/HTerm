@@ -1,21 +1,22 @@
 // SendCommand
 //
 $id = System.ComputerIP
+
 // get text from textbox
 $text = Windows.HTerm.Input1.Text
 // write command to output
 Windows.HTerm.List2.AddItem $text
 $cmd = Functions.get_part($text | "" | 1) // Get base command
-Windows.HTerm.List2.AddItem $cmd
-$arg = 
+$temparg = Functions.get_part($text | $cmd | 2)
+$arg = Functions.trim($temparg)
 $checkcmd = Functions.database_exists($id=pkg-$cmd) // Check if command exists
 if $checkcmd = 1 // Command exists
-    $file = Functions.file_exists(bin/$cmd.code) // Check if binary for command exists
-    if $file = 1 // Command on system, run it!
-        $file_data = Functions.file_load_text(bin/$cmd.code | $pass) // load binary data
-        $run = Functions.execute_code($file_data) // run it
+    $hbash_file = Functions.file_exists(bin/$cmd.code) // Check if binary for command exists
+    if $hbash_file = 1 // Command on system, run it!
+        $hbash_file_data = Functions.file_load_text(bin/$cmd.code | $pass) // load binary data
+        $run = Functions.execute_code($hbash_file_data) // run it (VARIABLES SET IN SCRIPT WILL BE READ ONLY, FIX JEREMY
     else
-        Windows.HTerm.List2.AddItem Binary for package $cmd not found in /bin/$cmd.code
+        Windows.HTerm.List2.AddItem The binary for the package $cmd was not found in /bin/$cmd.code
     endif
 else
     Windows.HTerm.List2.AddItem Command $cmd not found

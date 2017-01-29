@@ -1,0 +1,11 @@
+Windows.HTerm.List2.AddItem #    #    ######
+Windows.HTerm.List2.AddItem #    #    #
+Windows.HTerm.List2.AddItem ######  ########
+Windows.HTerm.List2.AddItem #    #         #
+Windows.HTerm.List2.AddItem #    #    ######
+Windows.HTerm.List2.AddItem OS: HSOS
+Windows.HTerm.List2.AddItem Kernel: Pretend-Linux 1.0
+Windows.HTerm.List2.AddItem Uptime: System.SecondsLoggedIn seconds
+Windows.HTerm.List2.AddItem Shell: HTerm Bash
+Windows.HTerm.List2.AddItem CPU: N/A
+Windows.HTerm.List2.AddItem RAM: N/A

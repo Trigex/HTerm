@@ -1,7 +1,7 @@
-HTerm<>Standard Window<>500<>339<>True<>null<>True<><>center<>0<>0<>False<><><>False<>False<>custom<>0,0*600,0*600,350*0,350*0,0*<>
+HTerm<>Standard Window<>600<>350<>True<>null<>True<><>center<>0<>0<>False<><><>False<>False<>custom<>0,0*600,0*600,350*0,350*0,0*<>
 
 <OBJECTS>
-Input1<~>input<~>Standard Input<~><~>5<~>313<~>488<~>19<~>1<~><~><~><~>False<~>255,0,121,107<~>False<~>False<~>Input1 EVENTS: [s-e]KEY DOWN will RUN CODE = <BR>if System.LastKeyPressedCode = 13 // Check if enter key was pressed<BR>    Execute.SendCommand<BR>endif<BR>[event]<~><~><~><~>
-List2<~>list<~>Standard List<~><~>5<~>34<~>489<~>274<~>2<~><~><~>HTerm version 1.0<#item>Programmed by Trigex, 2017<#item>Licensed under the Apache License version 2<#item><~><~>255,0,121,107<~><~><~><~><~><~><~>
+Input1<~>input<~>Standard Input<~><~>5<~>313<~>588<~>19<~>1<~><~><~><~>False<~>255,0,121,107<~>False<~>False<~>Input1 EVENTS: [s-e]KEY DOWN will RUN CODE = <BR>if System.LastKeyPressedCode = 13 // Check if enter key was pressed<BR>    Execute.SendCommand<BR>endif<BR>[event]<~><~><~><~>
+List2<~>list<~>Standard List<~><~>5<~>34<~>589<~>274<~>2<~><~><~>HTerm version 1.0<#item>Programmed by Trigex, 2017<#item>Licensed under the Apache License version 2<#item><~><~>255,0,121,107<~><~><~><~><~><~><~>
 </OBJECTS>
 
