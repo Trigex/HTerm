@@ -1,0 +1,29 @@
+// ls
+//
+$ls_target_folder = Functions.get_part($arg | "" | 1) // the first argument to the command should be the flag, get that
+
+if $ls_target_folder = ""
+   $filelist = Functions.file_list_files($selected_dir|$pass)
+    if $filelist = [NONE]
+        Windows.HTerm.List2.AddItem {RED} Folder is empty
+    else
+        Windows.HTerm.List2.AdvancedImport <>||$filelist
+        
+    endif
+else
+    $ls_check_folder = Functions.directory_exists($ls_target_folder)
+	
+	if $ls_check_folder = 1 // Folder exists
+		$dir_list = Functions.file_list_files($ls_target_folder|$pass)
+		
+		if $dir_list = [NONE]
+			Windows.HTerm.List2.AddItem {RED} Folder is empty
+		else
+			Windows.HTerm.List2.AdvancedImport <>||$dir_list
+		endif
+	else
+		Windows.HTerm.List2.AddItem {RED} Folder does not exists
+	endif
+endif
+
+

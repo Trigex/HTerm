@@ -1,0 +1,19 @@
+// cd
+//
+$selected_dir = ""
+
+$target_folder = Functions.get_part($arg | "" | 1) // the first argument to the command should be the flag, get that
+
+if $target_folder = "" // if user didnt enter a flag, tell them what flags to use
+    Windows.HTerm.List2.AddItem {LIME} Please enter a path to a folder
+else
+    $try_folder = Functions.directory_exists($target_folder)
+
+    if $try_folder = 1
+        Windows.HTerm.List2.AddItem {LIME} $target_folder
+		$selected_dir = $target_folder
+		echo $selected_dir
+    else
+        Windows.HTerm.List2.AddItem {RED} Directory not found: $target_folder
+    endif
+endif

@@ -5,7 +5,6 @@ $flag = Functions.get_part($arg | "" | 1) // the first argument to the command s
 if $flag = "" // if user didnt enter a flag, tell them what flags to use
     Windows.HTerm.List2.AddItem No flags provided... please reference the following flags for usage
     Windows.HTerm.List2.AddItem -install - Installs the argued package
-    Windows.HTerm.List2.AddItem -remove - Uninstalls the argued package
     Windows.HTerm.List2.AddItem -upload - Uploads the argued package
 else
     $tmpotherarg = Functions.get_part($arg | "" | 2) // if there was a flag, get the argument that came with it

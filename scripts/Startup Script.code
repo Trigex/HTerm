@@ -1,7 +1,7 @@
 // Startup Script
 // This script will run automatically when the System is launched
 // You can add your own code or leave it blank.
+$pass = a
+Accept.RootPassword $pass
 
-Accept.RootPassword dev
-$pass = dev
-
+$selected_dir = "/home/"

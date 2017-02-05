@@ -1,9 +1,9 @@
 // cat - Print contents of file
 // Programmed by Trigex, 2017, licensed under the Apache License version 2
-$cat_check = Functions.file_exists(-upload /bin/cat.code)
+$cat_check = Functions.file_exists($arg)
 if $cat_check = 1
-    $cat_data = Functions.file_load_text(-upload /bin/cat.code | dev)
+    $cat_data = Functions.file_load_text($arg | dev)
     Windows.HTerm.List2.AddItem $cat_data
 else
-    Windows.HTerm.List2.AddItem File -upload /bin/cat.code not found
+    Windows.HTerm.List2.AddItem File $arg not found
 endif

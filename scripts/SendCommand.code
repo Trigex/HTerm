@@ -16,7 +16,7 @@ if $checkcmd = 1 // Command exists
         $hbash_file_data = Functions.file_load_text(bin/$cmd.code | $pass) // load binary data
         $run = Functions.execute_code($hbash_file_data) // run it (VARIABLES SET IN SCRIPT WILL BE READ ONLY, FIX JEREMY
     else
-        Windows.HTerm.List2.AddItem The binary for the package $cmd was not found in /bin/$cmd.code
+        Windows.HTerm.List2.AddItem The binary for the command $cmd was not found in /bin/$cmd.code
     endif
 else
     Windows.HTerm.List2.AddItem Command $cmd not found

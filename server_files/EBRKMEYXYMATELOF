@@ -1,0 +1,20 @@
+// connect
+// Written by xaythor
+
+$target_ip = Functions.get_part($arg | "" | 1) // the first argument to the command should be the flag, get that
+
+
+if $target_ip = "" // if user didnt enter a flag, tell them what flags to use
+    Windows.HTerm.List2.AddItem No target IP provided... please reference the following for usage
+    Windows.HTerm.List2.AddItem -IP - The IP you want to connect to
+    Windows.HTerm.List2.AddItem -Start Port - The port you want to connect to
+else
+    $target_port = Functions.get_part($arg | "" | 2) // if there was a flag, get the argument that came with it
+    $target_p = Functions.trim($target_port)
+	
+	if $target_p = ""
+    Connect $target_ip
+	else
+		Connect $target_ip:$target_p
+	endif
+endif

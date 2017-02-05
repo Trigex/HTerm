@@ -1,8 +1,21 @@
-// help - Help for built in commands
-// Programmed by Trigex, 2017, licensed under the Apache License version 2
-Windows.HTerm.List2.ClearItems
-Windows.HTerm.List2.AddItem HTerm help menu
-Windows.HTerm.List2.AddItem =========
-Windows.HTerm.List2.AddItem echo - Prints supplied string
-Windows.HTerm.List2.AddItem cat - Prints contents of file to screen
-Windows.HTerm.List2.AddItem
+// help
+//
+//Windows.HTerm.List2.ClearItems
+Windows.HTerm.List2.AddItem {ORANGE} HTerm Help Menu
+Windows.HTerm.List2.AddItem {ORANGE} =========
+Windows.HTerm.List2.AddItem {ORANGE} echo - Prints supplied string
+Windows.HTerm.List2.AddItem {ORANGE} cat - Prints contents of file to screen
+Windows.HTerm.List2.AddItem {ORANGE} install - Installs default HTerm packages
+Windows.HTerm.List2.AddItem {ORANGE} connect - Connects to IP or website
+Windows.HTerm.List2.AddItem {ORANGE} pacmg - Install, remove and manage packages
+Windows.HTerm.List2.AddItem {ORANGE} clear - Clears terminal
+Windows.HTerm.List2.AddItem {ORANGE} ./ - Runs supplied program
+Windows.HTerm.List2.AddItem {ORANGE} mkdir - Creates a directory
+Windows.HTerm.List2.AddItem {ORANGE} rm - Deletes a file
+Windows.HTerm.List2.AddItem {ORANGE} touch - Creates a file
+Windows.HTerm.List2.AddItem {ORANGE} man - Get manpages of supplied command
+Windows.HTerm.List2.AddItem {ORANGE} help - Lists default commands
+Windows.HTerm.List2.AddItem {ORANGE} ls - Shows every entry in a directory
+Windows.HTerm.List2.AddItem {ORANGE} scan - Scans IP or website between two port numbers
+Windows.HTerm.List2.AddItem {ORANGE} cd - Changes directory to given path
+Windows.HTerm.List2.AddItem {ORANGE} wget - Download supplied file
